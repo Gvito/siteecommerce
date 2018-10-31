@@ -2,28 +2,23 @@
 <?php
 
 require "function.php";
-
 $users = getUsers();
 
-foreach ($_POST as $key => $value) {
-  $_POST[$key] = strtoupper($value);
-}
 
-foreach ($users as $key => $user) {
-  echo $users ["name"] . " " . $users["firstName"];
-}
+foreach ($users as $key => $value) {
 
-foreach ($users as $key => $user) {
-  if($user["name"] === $_POST["name"] && $user["firstName"] === $_POST["firstName"]) {
-    main("Location: index.php");
+  if($value["name"] === $_POST["name"] && $value["password"] === $_POST["password"]) {
+    header("Location: products.php");
     exit;
   }
+
 }
 
-main("Location: index.php/message=Attention, Nom ou Mot de Passe incorrect");
+header("Location: index.php");
 exit;
 
 
-
-
  ?>
+
+
+<!-- ?message= Attention, Nom ou Mot de Passe incorrect" -->

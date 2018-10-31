@@ -6,7 +6,7 @@
 <!-- Start Main -->
 <main class="container-fluid pb-4">
   <div class="titleandsection">
-  <h3 class="mx-auto text-center mb-4 border border-dark w-25 pt-2 pb-2">Nos produits</h3>
+  <h3 class="mx-auto text-center mb-4 border border-dark w-25 pt-2 pb-2 rounded">Nos produits</h3>
     <section class="row">
       <article class="col-12 col-sm-6">
         <div class="card bg-light mb-3">
