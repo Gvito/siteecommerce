@@ -6,7 +6,7 @@
 <!-- Start Main -->
 <main class="container-fluid mt-5 mb-4 w-75">
 <!-- Start Form -->
- <form>
+ <form class="mx-auto">
     <div class="form-group row">
       <label for="inputEmail3" class="col-12 col-form-label">Email</label>
       <div class="col-12">

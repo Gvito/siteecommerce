@@ -2,7 +2,7 @@
 
 <!-- Start footer -->
 <footer class="">
-  <div class="jumbotron jumbotron-fluid bg-secondary text-white mb-auto">
+  <div class="jumbotron jumbotron-fluid text-white bg-dark mb-auto">
     <div class="container">
       <p class="lead text-center">Site E-commerce 2018. Tous Droits réservés </p>
     </div>

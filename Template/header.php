@@ -22,11 +22,15 @@
 <body>
 
 <!-- Ici démarre le code de votre header -->
-<header class="">
-    <div class="jumbotron jumbotron-fluid bg-secondary text-white">
-      <div class="container">
-        <h1 class="display-4 text-center">Site E-commerce</h1>
-        <p class="lead text-center font-weight-bold">Retrouver des produits électoniques aux meilleurs prix.</p>
+<header>
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner mb-5">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="img/imghome.png" alt="First slide">
+          <div class="carousel-caption d-none d-md-block">
+            <h1 class="display-6 text-center">Site E-commerce</h1>
+            <p class="lead text-center font-weight-bold">Retrouver des produits électoniques aux meilleurs prix !</p>
+        </div>
       </div>
     </div>
 </header>

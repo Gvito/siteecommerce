@@ -4,12 +4,12 @@
 <?php include("Template/header.php"); ?>
 
 <!-- Start Main -->
-<main class="container-fluid">
+<main class="container-fluid pb-4">
   <div class="titleandsection">
-  <h3 class="text-center mb-4<">Nos produits</h3>
+  <h3 class="mx-auto text-center mb-4 border border-dark w-25 pt-2 pb-2">Nos produits</h3>
     <section class="row">
       <article class="col-12 col-sm-6">
-        <div class="card border-light mb-3">
+        <div class="card bg-light mb-3">
           <img class="card-img-top" src="img/pcone.png" alt="Card image cap">
           <div class="card-body">
             <h3 class="card-text"> HP PC Portable 17 <span class="badge badge-secondary">N°1 des ventes</span> </h3>
@@ -23,7 +23,7 @@
         </div>
       </article>
       <article class="col-12 col-sm-6">
-        <div class="card border-light mb-3">
+        <div class="card bg-light mb-3">
           <img class="card-img-top" src="img/pctwo.png" alt="Card image cap">
           <div class="card-body">
             <h3 class="card-text">HP PC Portable Stream 14</h3>
@@ -37,7 +37,7 @@
         </div>
       </article>
       <article class="col-12 col-sm-6">
-        <div class="card border-light mb-3">
+        <div class="card bg-light mb-3">
           <img class="card-img-top" src="img/pcthree.png" alt="Card image cap">
           <div class="card-body">
             <h3 class="card-text"> ACER Aspire A315-21 </h3>
@@ -51,7 +51,7 @@
         </div>
       </article>
       <article class="col-12 col-sm-6">
-        <div class="card border-light mb-3">
+        <div class="card bg-light mb-3">
           <img class="card-img-top" src="img/pcfour.png" alt="Card image cap">
           <div class="card-body">
             <h3 class="card-text"> ASUS R702UA-BX479T </h3>
