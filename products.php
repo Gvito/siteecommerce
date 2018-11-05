@@ -1,73 +1,45 @@
 <!-- voici la page qui n'est accessible que si l'utilisateur est connecté, qui affiche les produit et les informations sur l'utilisateur -->
 
 <!-- Start Header -->
-<?php include("Template/header.php"); ?>
+<?php
+// début de la session
+session_start();
+// vérification si l'utilisateur est bien connecté
+if(!isset($_SESSION["user"])){
+  header("Location: index.php");
+  exit;
+}
+require "Model/function.php";
+include("Template/header.php");
+
+$products = getProducts();
+ ?>
 
 <!-- Start Main -->
 <main class="container-fluid pb-4">
-  <div class="titleandsection">
   <h3 class="mx-auto text-center mb-4 border border-dark w-25 pt-2 pb-2 rounded">Nos produits</h3>
     <section class="row">
+       <?php foreach ($products as $key => $product) { ?>
       <article class="col-12 col-sm-6">
         <div class="card bg-light mb-3">
           <img class="card-img-top" src="img/pcone.png" alt="Card image cap">
           <div class="card-body">
-            <h3 class="card-text"> HP PC Portable 17 <span class="badge badge-secondary">N°1 des ventes</span> </h3>
-            <ul class="card-text">
-              <li>CPU : Intel Celeron N4000 - 1.1 GHz </li>
-              <li>RAM : 4 Go (1 x 4 Go) </li>
-              <li>500 Go HDD SATA - 5400 tours-min </li>
-              <li>Processeur graphique : Intel UHD Graphics 600 </li>
-            </ul>
+            <h5 class="card-title"><?php echo $product["name"]; ?></h5>
+            <p class="card-text"><?php echo $product["description"]; ?></p>
           </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Prix : <?php echo $product["price"]; ?></li>
+            <li class="list-group-item">Lieu de production: <?php echo $product["made_in"]; ?></li>
+            <li class="list-group-item">Catégorie : <?php echo $product["category"]; ?></li>
+          </ul>
         </div>
       </article>
-      <article class="col-12 col-sm-6">
-        <div class="card bg-light mb-3">
-          <img class="card-img-top" src="img/pctwo.png" alt="Card image cap">
-          <div class="card-body">
-            <h3 class="card-text">HP PC Portable Stream 14</h3>
-            <ul class="card-text">
-              <li>CPU : Intel Celeron N4000 - 1.1 GHz </li>
-              <li>RAM : 4 Go (1 x 4 Go) </li>
-              <li>500 Go HDD SATA - 5400 tours-min </li>
-              <li>Processeur graphique : Intel UHD Graphics 600 </li>
-            </ul>
-          </div>
-        </div>
-      </article>
-      <article class="col-12 col-sm-6">
-        <div class="card bg-light mb-3">
-          <img class="card-img-top" src="img/pcthree.png" alt="Card image cap">
-          <div class="card-body">
-            <h3 class="card-text"> ACER Aspire A315-21 </h3>
-            <ul class="card-text">
-              <li>CPU : Intel Celeron N4000 - 1.1 GHz </li>
-              <li>RAM : 4 Go (1 x 4 Go) </li>
-              <li>500 Go HDD SATA - 5400 tours-min </li>
-              <li>Processeur graphique : Intel UHD Graphics 600 </li>
-            </ul>
-          </div>
-        </div>
-      </article>
-      <article class="col-12 col-sm-6">
-        <div class="card bg-light mb-3">
-          <img class="card-img-top" src="img/pcfour.png" alt="Card image cap">
-          <div class="card-body">
-            <h3 class="card-text"> ASUS R702UA-BX479T </h3>
-            <ul class="card-text">
-              <li>CPU : Intel Celeron N4000 - 1.1 GHz </li>
-              <li>RAM : 4 Go (1 x 4 Go) </li>
-              <li>500 Go HDD SATA - 5400 tours-min </li>
-              <li>Processeur graphique : Intel UHD Graphics 600 </li>
-            </ul>
-          </div>
-        </div>
-      </article>
+      <?php
+        }
+      ?>
     </section>
-  </div>
 
-  <?php include("Template/aside.php") ?>
+  <?php include("Template/aside.php"); ?>
 
 </main>
 
